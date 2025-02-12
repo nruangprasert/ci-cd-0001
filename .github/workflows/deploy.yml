@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI/CD Pipeline Demo
 
 on: [push]
 
@@ -9,11 +9,13 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-	with: 
-		fetch-depth: 0
 
       - name: List Files (Debugging)
-        run: ls -l
-	
-      - name: Finish Deployment
-      - run: echo "Deployment Successful."
+        run: ls -lah
+
+      - name: Print Current Directory
+        run: pwd
+
+      - name: Simulate Deployment
+        run: echo "✅ Deployment Successful! CI/CD is working!"
+
